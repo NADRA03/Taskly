@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dZJhhNIc0oYd1KA/WEGQZrDyIseCFLOsqeRtfUts0a0=",
+  "Source": "Taskly.Api",
+  "BasePath": "_content/Taskly.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
