@@ -31,8 +31,8 @@ export default function TaskManager() {
             onClick={() => toggleTask(task.id)}
             className={`p-3 rounded-lg cursor-pointer transition-all duration-200 shadow-sm ${
               task.done
-                ? "bg-green-600 line-through opacity-80"
-                : "bg-gray-700 hover:bg-gray-600"
+                ? "line-through"
+                : ""
             }`}
           >
             {task.text}

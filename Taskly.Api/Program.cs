@@ -14,8 +14,18 @@ builder.Services.AddSwaggerGen();
 // Register SupabaseService
 builder.Services.AddSingleton<SupabaseService>();
 
-// Optional: if you implement a chatbot service
-// builder.Services.AddSingleton<ChatbotService>();
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") // your React dev URL
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials();
+        });
+});
 
 var app = builder.Build();
 
@@ -27,6 +37,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Enable CORS
+app.UseCors("AllowFrontend");
 
 // Initialize Supabase client
 var supa = app.Services.GetRequiredService<SupabaseService>().Client;
@@ -139,6 +152,25 @@ app.MapPost("/api/auth/login", async (Microsoft.AspNetCore.Http.HttpRequest req)
         return Results.BadRequest(new { message = ex.Message });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ---------------- WeatherForecast ----------------
 var summaries = new[]

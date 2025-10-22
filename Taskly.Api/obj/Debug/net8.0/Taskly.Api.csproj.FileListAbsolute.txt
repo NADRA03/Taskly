@@ -150,3 +150,4 @@ C:\Users\Nadra\Taskly\Taskly.Api\obj\Debug\net8.0\refint\Taskly.Api.dll
 C:\Users\Nadra\Taskly\Taskly.Api\obj\Debug\net8.0\Taskly.Api.pdb
 C:\Users\Nadra\Taskly\Taskly.Api\obj\Debug\net8.0\Taskly.Api.genruntimeconfig.cache
 C:\Users\Nadra\Taskly\Taskly.Api\obj\Debug\net8.0\ref\Taskly.Api.dll
+C:\Users\Nadra\Taskly\Taskly.Api\obj\Debug\net8.0\Taskly.Api.sourcelink.json
